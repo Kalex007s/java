@@ -37,17 +37,23 @@ public class Main {
         int score = 91;
         if (score >= 90) {
             System.out.println("A 학점");
-        }else if (score >= 80 && score < 90) {
+        } else if (score >= 80 && score < 90) {
             System.out.println("B 학점");
         } else if (score >= 70 && score < 80) {
             System.out.println("C 학점");
         } else if (score >= 60 && score < 70) {
             System.out.println("D 학점");
-        }else {
+        } else {
             System.out.println("F학점 넌 걍 그만 나와라");
 
         }
-    }
-
+        //if문 속의 if문
+        if (true) {
+            if (true) {
+                if (true) {
+                    System.out.println("if문 속의 if문");
+                }
+            }
 }
-
+}
+}
