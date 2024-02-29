@@ -1,4 +1,4 @@
-public class Temp {
+public class Main {
     public static void main(String[] args) {
         //switch case
         int a = 2;
