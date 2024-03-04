@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class test {
+public class Studyscannerself {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("당신은 방금 시험을 마쳤습니다. 현재 당신의 기분이 좋다면 1, 기분이 좋지 않다면 2를 입력해주세요.");
 
-    int emotion = scanner.nextInt();
+    int  emotion = scanner.nextInt();
 
     if (emotion == 1) {
         System.out.println("그동안의 노력이 빛을 바랬군요, 축하드립니다.");

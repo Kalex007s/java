@@ -104,7 +104,7 @@ public class Main {
 // 변수 1일 사라지는 시점*/
 
 //        type casting
-        int value1 = (int)5.3;
+      /*  int value1 = (int)5.3;
         long value2 = (long)10;
         float value3 = (float) 5.8;
         double value4 = (double)16;
@@ -124,6 +124,7 @@ public class Main {
         System.out.println(value6);
         System.out.println(value7);
         System.out.println(value8);
+*/
 
     }
     }
