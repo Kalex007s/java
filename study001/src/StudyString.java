@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StudyString {
     public static void main(String[] args) {
 
@@ -47,5 +49,34 @@ public class StudyString {
         System.out.println(1 + "Hi" + 2); // 1Hi2
 
         // deprecated : 바뀐 버전이 있으니 확인 후 바뀐 버전을 사용해라
+
+
+        //문자열 수정
+        String srt10 = new String("안녕");
+        String str11 = srt10;
+
+        String str10 = "안녕하세요";
+
+        System.out.println(str10);
+        System.out.println(str11);
+
+        //배열의 참조 자료형
+        int[] array10 = new int[] {3,4,5};
+        int[] array11 = array10;
+        array10[0] = 6;
+        array10[1] = 7;
+        array10[2] = 8;
+
+        System.out.println(Arrays.toString(array10));
+        System.out.println(Arrays.toString(array11));
+
+        //리터럴을 바로 입력한 데이터는 문자열이 같을 때 하나의 객채를 공유
+        String str20 = new String("안녕"); // 새로운 저장공간을 할당한 뒤 저장
+        String str21 = "안녕"; // 새로운 저장공간을 할당한 뒤 저장;; 같은 "안녕"이지만 컴파일 단계에서 str20과 str21, str23은 새로운 저장공간을 할당해서 만들었다
+        String str22 = "안녕"; // 컴파일 단계에서 생성된 str21, str22를 생성하려 보니 str21과 같은 값을 가졌기 때문에 str22는 str21과 같은 객채를 공유한다.
+        String str23 = new String("안녕");
+
+        
+
     }
 }
