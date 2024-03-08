@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Studyscannerself {
+public class StudyScannerself {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("당신은 방금 시험을 마쳤습니다. 현재 당신의 기분이 좋다면 1, 기분이 좋지 않다면 2를 입력해주세요.");

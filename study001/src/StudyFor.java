@@ -1,4 +1,4 @@
-public class Studyfor {
+public class StudyFor {
     public static void main(String[]args) {
 
         /*
