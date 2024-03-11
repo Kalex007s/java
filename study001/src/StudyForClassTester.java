@@ -1,3 +1,4 @@
+//이해가 잘 안됌
 public class StudyForClassTester {
     public static void main(String[] args) {
         StudyForClass tom = new StudyForClass("Tom",18,"Daejeon","123456");

@@ -10,6 +10,7 @@ public class SelfTestSpace {
 
         Scanner sc = new Scanner(System.in);
         int[] array = new int[10];
+        int[] arrattrue = new int[10];
 
 
         System.out.println("양에 정수 10개를 입력해주세요");
@@ -19,16 +20,14 @@ public class SelfTestSpace {
             if (array[i] < 0) {
                 System.out.println("입력받은 값이 양의 정수가 아니므로 다시 입력해주세요.");
                 i = i - 1;
-            } else {
-                array[i] = ;
             }
         }
-
+        //3의 배tn인지 확인
         for (int j = 0; j < array.length; j++) {
             if (array[j] % 3 == 0) {
                 arrattrue[j] = array[j];
             }
-            System.out.print(array[j] + " ");
+            System.out.print(arrattrue[j] + " ");
         }
     }
 }

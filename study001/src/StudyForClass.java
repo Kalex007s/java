@@ -1,3 +1,4 @@
+//클래스 수업..(이해가 잘 안됌)
 public class StudyForClass {
     private String name;
     private int age;

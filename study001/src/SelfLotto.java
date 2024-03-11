@@ -27,6 +27,12 @@ public class SelfLotto {
 
             //유저가 입력한 값과 중복되는 값이 있는지 확인하는 코드
             for (int j = 0; j < i; j++) {
+                if(userNumber[i]>45) {
+                    System.out.println("입력하신 숫자는 범위를 벗어나는 숫자입니다.\n" +
+                            "다시 입력해주세요");
+                    i = i - 1;
+                    break;
+                }
                 if (userNumber[j] == userNumber[i]) {
                     System.out.println("입력하신 숫자는 이전 숫자와 중복되는 숫자입니다.\n" +
                             "다시 입력해주세요");
