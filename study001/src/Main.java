@@ -125,24 +125,5 @@ public class Main {
         System.out.println(value7);
         System.out.println(value8);
 */
-
-
-
-
-        //if-else if-else 구문을 이용해 점수를 학점으로 변환하는 예
-        // 90이상 : A, 80이상~90미만 : B, 70이상~80미만 : C, 70 미만 : F
-        int a = 85;
-        if(a >=90) {
-            System.out.println("A학점");
-        }
-        else if(a >= 80) {
-            System.out.println("B학점");
-        }
-        else if(a >= 70) {
-                System.out.println("C학점");
-        }
-        else {
-            System.out.println("F학점");
-        }
     }
-    }
+}
