@@ -13,7 +13,6 @@ public class Count {
         String removeSpace;
         int vowelsCount = 0;
         int counsonantCount = 0;
-
         removeSpace = str.replace(" ", "");
 
         for (int i=0;i<removeSpace.length();i++) {

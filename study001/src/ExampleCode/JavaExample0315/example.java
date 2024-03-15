@@ -1,7 +1,7 @@
 package ExampleCode.JavaExample0315;
 
 public class example {
-    static void bubble(int[] arr) {
+    static void bubblesSort(int[] arr) {
         int n = arr.length;
         int temp = 0;
         for(int i=0; i < n; i++){
@@ -24,7 +24,7 @@ public class example {
         }
         System.out.println();
 
-        bubble(arr);
+        bubblesSort(arr);
 
         for(int i=0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
