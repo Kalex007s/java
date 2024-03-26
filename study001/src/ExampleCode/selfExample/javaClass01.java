@@ -1,6 +1,4 @@
 package ExampleCode.selfExample;
-
-
     class A {
         int m = 3;
 
@@ -16,4 +14,5 @@ package ExampleCode.selfExample;
 
             a.print();
         }
+
 }
