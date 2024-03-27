@@ -1,4 +1,4 @@
-package ExampleCode;
+package ExampleCode.StrSumExample;
 
 import java.sql.Array;
 

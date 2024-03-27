@@ -1,4 +1,4 @@
-package ExampleCode;
+package ExampleCode.selfExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;

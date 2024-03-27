@@ -1,4 +1,4 @@
-package ExampleCode;
+package ExampleCode.selfExample;
 
 import java.util.Arrays;
 import java.util.Scanner;
