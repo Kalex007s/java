@@ -15,16 +15,17 @@ package ExampleCode.HW0327;
         2반 10번 창수 : 평균 78점
         3반 27번 영철 : 평균 86점
     */
-    class Student {
 
-    }
-    public class Q3 {
+    public abstract class Q3 {
+        public abstract float getAvg();
         public static void main(String[] args) {
-//        Student a = new Student("동수", 1, 3, 90, 80, 100);
-//        Student b = new Student("창수", 2, 10, 80, 70, 85);
-//        Student c = new Student("영철", 3, 27, 95, 75, 90);
-//        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
-//        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
-//        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
+        Student a = new Student("동수", 1, 3, 90, 80, 100);
+        Student b = new Student("창수", 2, 10, 80, 70, 85);
+        Student c = new Student("영철", 3, 27, 95, 75, 90);
+        System.out.println(a.toString() + " : 평균 " + a.getAvg() + "점"); //1반 3번 동수 : 평균 90점
+        System.out.println(b.toString() + " : 평균 " + b.getAvg() + "점"); //2반 10번 창수 : 평균 78점
+        System.out.println(c.toString() + " : 평균 " + c.getAvg() + "점"); //3반 27번 영철 : 평균 86점
         }
+
+
     }

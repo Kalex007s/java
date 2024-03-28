@@ -26,8 +26,23 @@ public class Q4 {
         int count = 0; // 시도횟수를 세기위한 변수
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("입력값을 입력하십시오.");
         do {
-            // 여기 코드를 작성
+            input = sc.nextInt();
+            if (input>answer){
+                System.out.println("더 작은 수를 입력하세요");
+                count++;
+
+            } else if (input<answer) {
+                System.out.println("더 큰 수를 입력하세요");
+                count++;
+
+            } else if (input==answer) {
+                System.out.println("정답입니다.");
+                break;
+            }
         } while(true); // 무한반복문
+
+        System.out.println("시도횟수는 "+count+"번입니다");
     }
 }
