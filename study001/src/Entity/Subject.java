@@ -1,35 +1,45 @@
 package Entity;
 
+import Entity.Enum.*;
+
 public class Subject {
-    private int subjectID;
+    CategorySubject categorySubjectName;
+    CategorySubjectId categorySubjectId;
     private int subjectCredits;
-    private int totalStudents;
-    private String subjectName;
+    CategoryTotalStudents categoryTotalStudents;
     private String subjectCode;
     private String subjectDescription;
     private String subjectTimetable;
     private String subjectProfessor;
-    private String subjectLevel;
-    private String subjectLocation;
+    CategoryLevel categoryLevel;
+    CategorySubjectLocation categorySubjectLocation;
     private String subjectType;
 
     public Subject() {
     }
 
-    public Subject(String subjectName, int subjectID, int totalStudents, String subjectLevel, String subjectLocation) {
-        this.subjectID = subjectID;
-        this.totalStudents = totalStudents;
-        this.subjectName = subjectName;
-        this.subjectLevel = subjectLevel;
-        this.subjectLocation = subjectLocation;
+    public Subject(CategorySubject categorySubject, CategorySubjectId categorySubjectId, CategoryTotalStudents categoryTotalStudents, CategoryLevel categoryLevel, CategorySubjectLocation categorySubjectLocation) {
+        this.categorySubjectName = categorySubject;
+        this.categorySubjectId = categorySubjectId;
+        this.categoryTotalStudents = categoryTotalStudents;
+        this.categoryLevel = categoryLevel;
+        this.categorySubjectLocation = categorySubjectLocation;
     }
 
-    public int getSubjectID() {
-        return subjectID;
+    public CategorySubject getCategorySubjectName() {
+        return categorySubjectName;
     }
 
-    public void setSubjectID(int subjectID) {
-        this.subjectID = subjectID;
+    public void setCategorySubjectName(CategorySubject categorySubjectName) {
+        this.categorySubjectName = categorySubjectName;
+    }
+
+    public CategorySubjectId getCategorySubjectId() {
+        return categorySubjectId;
+    }
+
+    public void setCategorySubjectId(CategorySubjectId categorySubjectId) {
+        this.categorySubjectId = categorySubjectId;
     }
 
     public int getSubjectCredits() {
@@ -40,20 +50,12 @@ public class Subject {
         this.subjectCredits = subjectCredits;
     }
 
-    public int getTotalStudents() {
-        return totalStudents;
+    public CategoryTotalStudents getCategoryTotalStudents() {
+        return categoryTotalStudents;
     }
 
-    public void setTotalStudents(int totalStudents) {
-        this.totalStudents = totalStudents;
-    }
-
-    public String getSubjectName() {
-        return subjectName;
-    }
-
-    public void setSubjectName(String subjectName) {
-        this.subjectName = subjectName;
+    public void setCategoryTotalStudents(CategoryTotalStudents categoryTotalStudents) {
+        this.categoryTotalStudents = categoryTotalStudents;
     }
 
     public String getSubjectCode() {
@@ -88,20 +90,20 @@ public class Subject {
         this.subjectProfessor = subjectProfessor;
     }
 
-    public String getSubjectLevel() {
-        return subjectLevel;
+    public CategoryLevel getCategoryLevel() {
+        return categoryLevel;
     }
 
-    public void setSubjectLevel(String subjectLevel) {
-        this.subjectLevel = subjectLevel;
+    public void setCategoryLevel(CategoryLevel categoryLevel) {
+        this.categoryLevel = categoryLevel;
     }
 
-    public String getSubjectLocation() {
-        return subjectLocation;
+    public CategorySubjectLocation getCategorySubjectLocation() {
+        return categorySubjectLocation;
     }
 
-    public void setSubjectLocation(String subjectLocation) {
-        this.subjectLocation = subjectLocation;
+    public void setCategorySubjectLocation(CategorySubjectLocation categorySubjectLocation) {
+        this.categorySubjectLocation = categorySubjectLocation;
     }
 
     public String getSubjectType() {
@@ -114,8 +116,8 @@ public class Subject {
 
     @Override
     public String toString(){
-        return "Lecture Info.\n학과명: "+subjectName+" /학과 ID: "+subjectID+" /수업 레벨: "+subjectLevel+
-                " /수강가능인원: "+totalStudents+" /수강지역: "+subjectLocation;
+        return "Lecture Info.\n학과명: "+ categorySubjectName +" /학과 ID: "+categorySubjectId+" /수업 레벨: "+categoryLevel+
+                " /수강가능인원: "+categoryTotalStudents+" /수강지역: "+categorySubjectLocation;
     }
 }
 

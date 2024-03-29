@@ -2,15 +2,14 @@ package Entity;
 
 public class SubjectRegistration {
     String userId;
-    int SubjectId;
+    String SubjectId;
 
 
     public SubjectRegistration() {
     }
-
-    public SubjectRegistration(String userId, int subjectId) {
+    public SubjectRegistration(String userId, String subjectId) {
         this.userId = userId;
-        this.SubjectId = subjectId;
+        SubjectId = subjectId;
     }
 
     public String getUserId() {
@@ -21,11 +20,11 @@ public class SubjectRegistration {
         this.userId = userId;
     }
 
-    public int getSubjectId() {
+    public String getSubjectId() {
         return SubjectId;
     }
 
-    public void setSubjectId(int subjectId) {
+    public void setSubjectId(String subjectId) {
         SubjectId = subjectId;
     }
 }

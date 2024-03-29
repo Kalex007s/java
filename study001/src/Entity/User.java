@@ -1,5 +1,7 @@
 package Entity;
 
+import Entity.Enum.CategoryUserGender;
+
 import java.time.LocalDate;
 
 public class User {
@@ -13,7 +15,7 @@ public class User {
     private String emailAddress;
     private String userPassword;
     private String address;
-    private String gender;
+    CategoryUserGender categoryUserGender;
     private String name;
     private String permissionLevel;
     private String languagePreference;
@@ -23,14 +25,14 @@ public class User {
     public User() {
     }
 
-    public User(String name,String userID, LocalDate dataOfBirth, String phoneNumber,
-                int age, String emailAddress, String gender) {
+    public User(String name,String userID, LocalDate dataOfBirth, String phoneNumber, int age, String emailAddress,
+                CategoryUserGender categoryUserGender) {
         this.userID = userID;
         this.dataOfBirth = dataOfBirth;
         this.phoneNumber = phoneNumber;
         this.age = age;
         this.emailAddress = emailAddress;
-        this.gender = gender;
+        this.categoryUserGender = categoryUserGender;
         this.name = name;
     }
 
@@ -106,12 +108,12 @@ public class User {
         this.address = address;
     }
 
-    public String getGender() {
-        return gender;
+    public CategoryUserGender getCategoryUserGender() {
+        return categoryUserGender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setCategoryUserGender(CategoryUserGender categoryUserGender) {
+        this.categoryUserGender = categoryUserGender;
     }
 
     public String getName() {
@@ -154,9 +156,10 @@ public class User {
         this.userLevel = userLevel;
     }
 
+
     @Override
     public String toString() {
-        return "User Info:: 이름: "+name+"/ 성별: "+gender+"/ 나이: "+age+"/ 유저아이디: "+userID+"/ 생년월일 : "+dataOfBirth+
-                userID+"/ 핸드폰번호: "+phoneNumber+"/ 이메일: "+emailAddress;
+        return "User Info:: 이름: "+name+"/ 성별: "+categoryUserGender+"생년월일 : "+dataOfBirth+
+        userID+"/ 나이: "+age+"/ 유저아이디: "+userID+"/ 핸드폰번호: "+phoneNumber+"/ 이메일: "+emailAddress;
     }
 }

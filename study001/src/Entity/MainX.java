@@ -1,3 +1,4 @@
+/*
 package Entity;
 
 import JavaInterface.A;
@@ -14,7 +15,7 @@ public class main {
         Scanner scanner = new Scanner(System.in);
 
 
-        User user1 = new User("돌쇠", "K123", LocalDate.of(1999, 2, 4),
+       User user1 = new User("돌쇠", "K123", LocalDate.of(1999, 2, 4),
                 "010-8888-5555", 26, "kk@naver.com", "남");
         //System.out.println(user1.toString());
         User user2 = new User("마당쇠", "K456", LocalDate.of(1997, 3, 25),
@@ -48,12 +49,12 @@ public class main {
         SubjectRegistration subjectRegistration4 = new SubjectRegistration("K654", 4);
         subjectRegistrations.add(subjectRegistration4);
 
-        //2번
+        //2번 수강ID로 수강하고 있는 유저ID 찾기
 
-        int count = 0;
+
         System.out.println("찾고자 하는 과목의 과목아이디를 입력하시오.");
         int sujectIdIn = scanner.nextInt();
-
+        int count = 0;
         ArrayList<String> arrayListID = new ArrayList<>();
         for (int i = 0; i < subjectRegistrations.size(); i++) {
             if (subjectRegistrations.get(i).getSubjectId() == sujectIdIn) {
@@ -78,19 +79,22 @@ public class main {
         subjectInfo.add(sic);
         subjectInfo.add(sct);
 
-        //3번
-
+        //3번 유저의 loginId로 강의명 찾기
         scanner.nextLine();  // 행을 바꾸면서 가비지데이터를 날려야한다
+        System.out.println("수강생 ID를 입력하시오.");
         String userIdIn = scanner.nextLine();
         for (int i = 0; i < subjectRegistrations.size(); i++) {
             if (subjectRegistrations.get(i).getUserId().equalsIgnoreCase(userIdIn)) {
                 for (int j = 0; j < subjectInfo.size(); j++) {
                     if (subjectRegistrations.get(i).getSubjectId() == (subjectInfo.get(j).getSubjectID())) {
-                        System.out.println(subjectInfo.get(j).getSubjectName());
+                        System.out.println(userIdIn + " ID의 수강생이 수강하고 있는 과목은 "
+                                + subjectInfo.get(j).getSubjectName() + "입니다.");
                     }
                 }
             }
         }
+        //4번 강의명으로 수강생들의 이메일 찾기
+        System.out.println("강의명을 입력하시오.");
         String subjectName = scanner.nextLine();
         for(int i=0;i<subjectInfo.size();i++){
             if(subjectName.equalsIgnoreCase(subjectInfo.get(i).getSubjectName())){
@@ -98,7 +102,8 @@ public class main {
                     if(subjectRegistrations.get(j).getSubjectId()==subjectInfo.get(i).getSubjectID()){
                         for(int k=0;k<usersInfo.size();k++){
                             if(usersInfo.get(k).getUserID().equalsIgnoreCase(subjectRegistrations.get(j).getUserId())){
-                                System.out.println(usersInfo.get(k).getEmailAddress());
+                                System.out.println(subjectName+"을 수강하는 수강생들의 이메일은 "
+                                        +usersInfo.get(k).getEmailAddress()+" 입니다");
                             }
                         }
                     }
@@ -109,4 +114,4 @@ public class main {
 }
  //System.out.println("과목 아이디"+(2)+"을 수강 하는 학생의 수는 "
  //       +subjectRegistrations.get(i).getSubjectId()+"명이며 "+
- //       "수강생의 ID는 "+subjectRegistrations.get(i).getUserId()+" 입니다.");
+ //       "수강생의 ID는 "+subjectRegistrations.get(i).getUserId()+" 입니다.");*/
