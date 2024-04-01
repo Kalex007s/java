@@ -3,6 +3,7 @@ package Entity;
 
 public class Main2 {
         public static void main(String[]args){
+                //정보 가져오기
                 InfoCreat.createInfo();
                 //2번 수강ID로 수강하고 있는 유저ID 찾기
                 Method Method = new Method();
