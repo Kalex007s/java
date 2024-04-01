@@ -27,7 +27,16 @@ class A {
 public class ExternalCallMethods {
     public static void main(String[] args) {
         //객체 생성
-        A 
+        A a = new A();
+        //메서드 호출(멤버사용)
+        a.print();
+        int k = a.data();
+        a.data();
+        System.out.println(k);
+        double result = a.sum(3, 5.2);
+        System.out.println(result);
+        a.printMonth(5);
+        a.printMonth(15);
+        a.printMonth(k);
     }
-
 }
