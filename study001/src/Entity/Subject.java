@@ -18,7 +18,9 @@ public class Subject {
     public Subject() {
     }
 
-    public Subject(CategorySubject categorySubject, CategorySubjectId categorySubjectId, CategoryTotalStudents categoryTotalStudents, CategoryLevel categoryLevel, CategorySubjectLocation categorySubjectLocation) {
+    public Subject(CategorySubject categorySubject, CategorySubjectId categorySubjectId,
+                   CategoryTotalStudents categoryTotalStudents, CategoryLevel categoryLevel,
+                   CategorySubjectLocation categorySubjectLocation) {
         this.categorySubjectName = categorySubject;
         this.categorySubjectId = categorySubjectId;
         this.categoryTotalStudents = categoryTotalStudents;
