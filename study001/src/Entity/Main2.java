@@ -1,6 +1,9 @@
 
 package Entity;
 
+import Entity.Enum.CategoryRating;
+import Entity.Enum.CategorySubjectId;
+
 public class Main2 {
         public static void main(String[]args){
                 //정보 가져오기
@@ -12,6 +15,8 @@ public class Main2 {
                 Method.searchingSubjectNameByUserId();
                 //4번 강의명으로 수강생들의 이메일 찾기
                 Method.searchingUserEmailBySujectName();
+                //리뷰 생성
+                Method.createReview("K123", CategorySubjectId.KOR1,CategoryRating.STAR10,"좋은 강의였어요");
 
     }
 }

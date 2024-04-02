@@ -10,6 +10,7 @@ public class InfoCreat {
     static ArrayList<User> users;
     static ArrayList<Subject> subjects;
     static ArrayList<SubjectRegistration> subjectRegistrations;
+    static ArrayList<Review> reviews;
 
     public static void createInfo() {
         users = new ArrayList<>();
@@ -37,5 +38,12 @@ public class InfoCreat {
         subjectRegistrations.add(new SubjectRegistration("K456", "MAT2"));
         subjectRegistrations.add(new SubjectRegistration("K987", "SCI3"));
         subjectRegistrations.add(new SubjectRegistration("K654", "SCI3"));
+
+        reviews = new ArrayList<>();
+//        reviews.add(new Review(1,"K123",CategorySubjectId.KOR1,CategoryRating.STAR10,"좋은 강의였어요"));
+//        reviews.add(new Review(2,"K456",CategorySubjectId.MAT2,CategoryRating.STAR2,"수업이 너무 어려웠어요"));
+//        reviews.add(new Review(3,"K987",CategorySubjectId.KOR1,CategoryRating.STAR10,"좋은 강의였어요"));
+
+
     }
 }

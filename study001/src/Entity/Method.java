@@ -1,6 +1,8 @@
 package Entity;
 
+import Entity.Enum.CategoryRating;
 import Entity.Enum.CategorySubject;
+import Entity.Enum.CategorySubjectId;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -71,4 +73,51 @@ public class Method {
         }System.out.println(subjectName+"과목을 수강하고 있는 학생의 Email은 총 "+ count + "이며 Email은"
                 +arrayListEmail+" 입니다");
     }
+
+    public boolean createReview(String userId, CategorySubjectId subjectId
+            , CategoryRating rating, String text) {
+        // 점수체크
+//        if (rating < 1 || rating > 10) {
+//            System.out.println("평가점수는 1~10점 사이입니다.");
+//            return false;
+//        }
+        // 기존 리뷰 확인
+        if (!InfoCreat.reviews.isEmpty()) {
+            for(Review review : InfoCreat.reviews) {
+                if (review.getUserId().equalsIgnoreCase(review.getUserId())
+                        && review.getSubjectId().equals(subjectId)) {
+                    System.out.println("이미 작성한 리뷰가 있습니다.");
+                    return false;
+                }
+            }
+        }
+        // 수강여부 확인
+        boolean canReview = false;
+        for(SubjectRegistration registration : InfoCreat.subjectRegistrations) {
+            if (registration.getUserId().equals(userId)
+                    && registration.getSubjectId().equalsIgnoreCase(String.valueOf(subjectId))) {
+                canReview = true;
+                break;
+            }
+        }
+        if (!canReview) {
+            System.out.println("리뷰 작성 권한이 없습니다.");
+            return false;
+        }
+        InfoCreat.reviews.add(new Review(InfoCreat.reviews.size()+1, userId, subjectId, rating, text));
+        System.out.println(InfoCreat.reviews.toString());
+        return true;
+    }
+
+
+
+
+
+//    public void addReview(){
+//    boolean canAddReview = false;
+//    canAddReview = canAddReview("K123", CategorySubjectId.KOR1, CategoryRating.STAR10,"좋은 강의였어요");
+//    // void가 아닌 리턴형이 있는 메소드는 활용범위가 넓음. 예를 들어,
+//    // canAddReview의 true/false 여부에 따라 유저에게 상태 알림을 보낼 수 있음
+//    canAddReview = createReview("hero11", 2, 10, "아주 좋았어요2");
+//    canAddReview = createReview("nice", 3, 6, "보통이에요");
 }
