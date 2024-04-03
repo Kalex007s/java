@@ -11,6 +11,7 @@ public class InfoCreat {
     static ArrayList<Subject> subjects;
     static ArrayList<SubjectRegistration> subjectRegistrations;
     static ArrayList<Review> reviews;
+    static ArrayList<TeacherRegistration> teacherRegistrations;
 
     public static void createInfo() {
         users = new ArrayList<>();
@@ -43,6 +44,11 @@ public class InfoCreat {
 //        reviews.add(new Review(1,"K123",CategorySubjectId.KOR1,CategoryRating.STAR10,"좋은 강의였어요"));
 //        reviews.add(new Review(2,"K456",CategorySubjectId.MAT2,CategoryRating.STAR2,"수업이 너무 어려웠어요"));
 //        reviews.add(new Review(3,"K987",CategorySubjectId.KOR1,CategoryRating.STAR10,"좋은 강의였어요"));
+
+        teacherRegistrations = new ArrayList<>();
+        teacherRegistrations.add(new TeacherRegistration("TeacherNo01",CategorySubjectId.KOR1));
+        teacherRegistrations.add(new TeacherRegistration("TeacherNo01",CategorySubjectId.SCI3));
+        teacherRegistrations.add(new TeacherRegistration("TeacherNo02",CategorySubjectId.MAT2));
 
 
     }

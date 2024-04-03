@@ -5,6 +5,7 @@ import Entity.Enum.CategorySubject;
 import Entity.Enum.CategorySubjectId;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Method {
@@ -109,8 +110,24 @@ public class Method {
         return true;
     }
 
+    public void getTeacherBySubjectId(CategorySubjectId subjectId){
+        for(int i=0;i<InfoCreat.teacherRegistrations.size();i++){
+            if(InfoCreat.teacherRegistrations.get(i).getCategorySubjectId().equals(subjectId)) {
+                System.out.println("해당 과목ID을 가르치는 선생님의 TeacherId는 : " + InfoCreat.teacherRegistrations.get(i).getTeacherId());
+            }
+        }
+    }
 
-
+    public void getSubjectListByTeacherId(String teacherId) {
+        ArrayList<String>subjectListByTeacherId = new ArrayList<>();
+        for(int i=0;i<InfoCreat.teacherRegistrations.size();i++){
+            if(InfoCreat.teacherRegistrations.get(i).getTeacherId().equalsIgnoreCase(teacherId)){
+                subjectListByTeacherId.add(String.valueOf(InfoCreat.teacherRegistrations.get(i).getCategorySubjectId()));
+            }
+        }
+        System.out.println("아이디가 ["+teacherId +"]인 선생님이 하고 있는 강의과목 목록은 : "
+                +Arrays.toString(subjectListByTeacherId.toArray())+" 입니다");
+    }
 
 
 //    public void addReview(){

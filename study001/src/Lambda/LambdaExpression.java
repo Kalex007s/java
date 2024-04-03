@@ -40,5 +40,4 @@ public class LambdaExpression {
         D d2 = (x,y) -> x+y;
         System.out.println(d2.method4(10,5.5));
     }
-
 }
