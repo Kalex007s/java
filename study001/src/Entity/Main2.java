@@ -4,6 +4,9 @@ package Entity;
 import Entity.Enum.CategoryRating;
 import Entity.Enum.CategorySubjectId;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main2 {
         public static void main(String[]args){
                 //정보 가져오기
@@ -22,7 +25,10 @@ public class Main2 {
                 Method.getTeacherBySubjectId(CategorySubjectId.KOR1);
                 //2.특정 teacher가 가르치는 과목명 리스트 출력
                 Method.getSubjectListByTeacherId("TeacherNo01");
-
+                //Reply 객체가 생성될때 해당 글의 객체에 있는 replies 필드에 등록
+                Reply reply1 = new Reply("기대되요!","user1",1);
+                Method.creatReply(reply1);
+                //System.out.println(InfoCreat.replyArrayList);
 
         }
 }

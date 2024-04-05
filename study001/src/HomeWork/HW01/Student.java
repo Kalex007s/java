@@ -1,4 +1,4 @@
-package ExampleCode.HW0327;
+package HomeWork.HW01;
 
 class Student extends Q3{
     private String name;

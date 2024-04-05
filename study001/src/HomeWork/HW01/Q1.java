@@ -1,4 +1,4 @@
-package ExampleCode.HW0327;
+package HomeWork.HW01;
 import java.util.Scanner;
 
 public class Q1 {
@@ -11,15 +11,6 @@ public class Q1 {
             입력값이 -10이면 "음수" 출력 * */
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-
-        /*String thr1 = (num == 10) ? "양수" : "일치하지 않습니다.";
-        String thr2 = (num == 0) ? "0" : "일치하지 않습니다.";
-        String thr3 = (num == -10) ? "음수" : "일치 하지 않습니다.";
-
-        System.out.println(thr1);
-        System.out.println(thr2);
-        System.out.println(thr3);
-        System.out.println();*/
 
         String thr = (num==10) ? "양수" : (num==0) ? "0" : (num==-10) ? "음수" : "입력하신 값을 표현할 수 없습니다";
         System.out.println(thr);

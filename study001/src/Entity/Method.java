@@ -129,6 +129,27 @@ public class Method {
                 +Arrays.toString(subjectListByTeacherId.toArray())+" 입니다");
     }
 
+    public boolean creatReply(Reply reply){
+
+        for (int i = 0; i < InfoCreat.freeBoards.size(); i++) {
+            if (InfoCreat.freeBoards.get(i).getFreeBoardId()==reply.getFreeBoardId()){
+                FreeBoard freeBoard =InfoCreat.freeBoards.get(i);
+                freeBoard.setReplies(reply);
+                InfoCreat.replyArrayList.add(reply);
+                return true;
+            }
+
+        }
+        return false;
+    }
+    /*
+    InfoCreat.replyArrayList = new ArrayList<>();
+        if(creatReply(reply)){
+        InfoCreat.replyArrayList.add(reply);
+    }
+    */
+
+
 
 //    public void addReview(){
 //    boolean canAddReview = false;

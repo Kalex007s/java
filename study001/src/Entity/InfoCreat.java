@@ -12,6 +12,8 @@ public class InfoCreat {
     static ArrayList<SubjectRegistration> subjectRegistrations;
     static ArrayList<Review> reviews;
     static ArrayList<TeacherRegistration> teacherRegistrations;
+    static ArrayList<FreeBoard> freeBoards;
+    static ArrayList<Reply> replyArrayList;
 
     public static void createInfo() {
         users = new ArrayList<>();
@@ -50,6 +52,12 @@ public class InfoCreat {
         teacherRegistrations.add(new TeacherRegistration("TeacherNo01",CategorySubjectId.SCI3));
         teacherRegistrations.add(new TeacherRegistration("TeacherNo02",CategorySubjectId.MAT2));
 
+        freeBoards = new ArrayList<>();
+        freeBoards.add(new FreeBoard(1,"강의1","첫번째 강의 내용은 List입니다.","admin01"));
+        freeBoards.add(new FreeBoard(2,"강의2","두번째 강의 내용은 Set입니다.","admin03"));
+        freeBoards.add(new FreeBoard(3,"휴강","4월 10일은 국회위원 선거로 휴강입니다","admin02"));
+        freeBoards.add(new FreeBoard(4,"강의3","세번째 강의 내용은 Map입니다.","admin01"));
 
+        replyArrayList = new ArrayList<>();
     }
 }
