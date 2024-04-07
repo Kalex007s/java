@@ -13,26 +13,17 @@ public class Q1 {
     }
 
     public static String changeCase(String str) {
-
-        String[] strings = new String[11];
-        char[] chars = str.toCharArray();
-        for (int i = 0; i < strings.length; i++) {
-            chars = chars[i];
-            if()
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char change = str.charAt(i);
+           if (Character.isUpperCase(change)){
+               result = result+Character.toLowerCase(change);
+           }
+           else {
+               result = result+Character.toUpperCase(change);
+           }
         }
-
-        return Arrays.toString(changeStr);
+        str = result;
+        return str;
     }
-
 }
-//String str3 = "";
-//char[] str1 = new char[str.length()];
-//str1 = str.toCharArray();
-//char[] result = new String[str.length()];
-//
-//        for (int i = 65, j=0; i < 90; i++){
-//        if(str){
-//str1[i] = str1
-//            }
-//                    }
-//                    return result;
