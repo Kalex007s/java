@@ -13,12 +13,12 @@ public class HW02 {
         }
         System.out.println(); //줄바꿈
 //        2) 1~10까지의 숫자 중 짝수만 줄력하시오.
-        for (int i = 0; i < 10; i=i+2) {
+        for (int i = 0; i <= 10; i=i+2) {
             System.out.print(i+" ");
         }
         System.out.println();
 //        3) 1부터 50까지의 숫자 중 10의 배수만 출력하시오.
-        for (int i = 10; i < 50; i=i+10) {
+        for (int i = 10; i <= 50; i=i+10) {
             System.out.print(i+" ");
         }
     }
