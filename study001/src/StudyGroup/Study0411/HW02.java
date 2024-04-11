@@ -18,7 +18,7 @@ public class HW02 {
         }
         System.out.println();
 //        3) 1부터 50까지의 숫자 중 10의 배수만 출력하시오.
-        for (int i = 10; i < 50; i=i+10) {
+        for (int i = 10; i <= 50; i=i+10) {
             System.out.print(i+" ");
         }
     }
