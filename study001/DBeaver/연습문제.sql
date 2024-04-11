@@ -65,3 +65,59 @@ CASE weekday(주문일)
         WHEN '6' THEN '일요일'
     END as 한글요일
 from 주문;
+
+-- join 관련 예제
+-- 1.제품테이블과 주문세부테이블을 조인하여 제품명별로 주문수량합과 주문금액합을 보이시오.
+select
+제품명, sum(주문수량),sum(주문수량*제품.단가) as 주문금액합
+from 주문세부
+inner join 제품
+on 주문세부.제품번호 = 제품.제품번호
+group by 제품명;
+-- 2.주문,주문세부,제품테이블을 조인하여 '아이스크림'제품에 대하여 주문년도별 제품명별로 주문수량합을 보이시오.
+select
+year (주문일) as 주문년도, 제품명, sum(주문수량) as 주문수량합
+from 주문세부
+inner join 주문 on 주문세부.주문번호 = 주문.주문번호
+inner join 제품 on 주문세부.제품번호 = 제품.제품번호 
+where 제품명 like '%아이스크림%'
+group by year(주문일), 제품.제품명;
+-- 3. 제품. 주문세부 테이블을 조인하여 제품명별로 주문수량합을 보이시오.
+-- 이때 주문이 한 번도 안된 제품에 대한 정보도 나타내시오.
+select
+제품.제품번호, 제품명, sum(주문수량) as 주문수량합
+from 주문세부 right outer join 제품
+on 제품.제품번호 = 주문세부.제품번호 
+group by 제품명;
+-- 4. 고객회사 중 마일리지등급이 'A'인 고객의 정보를 조회하시오.
+select 고객번호, 담당자명, 고객회사명, 등급명, 마일리지
+from 고객 inner join 마일리지등급
+on 마일리지 between 하한마일리지 and 상한마일리지
+where 등급명 = 'A';
+
+-- 한 번이라도 주문한 적이 있는 고객의 정보
+select 고객번호,고객회사명
+from 고객
+where exists (select  * from 주문 where 고객.고객번호 = 주문.고객번호);
+-- 5. in (subquery) 이용하여 동일한 결과얻기
+select 고객번호,고객회사명
+from 고객
+where 고객번호 -- in (select 고객번호 from 주문 where 고객.고객번호 = 주문.고객번호 )
+in(select distinct 고객번호 from 주문)
+order by 고객.고객번호 ;
+
+
+-- 6. join을 이용하여 동일한 결과 얻기
+select 고객.고객번호,고객회사명
+from 고객
+inner join 주문 on 고객.고객번호 = 주문.고객번호
+group by 고객.고객번호
+order by 고객.고객번호;
+
+select  distinct 고객.고객번호, 고객회사명
+from 고객
+inner join 주문 on 고객.고객번호  = 주문.고객번호
+order by 고객.고객번호;
+
+
+
