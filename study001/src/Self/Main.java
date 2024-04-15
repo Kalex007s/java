@@ -1,45 +1,99 @@
 package Self;
 
-public class Main {
-    public static void main(String[] args) {
-        //#1. 단일 루프에서의 continue
-        for(int i=0; i<10; i++) {
-            continue;
-            //System.out.print(i+ " ");
-        }
-
-        for(int i=0; i<10; i++) {
-            System.out.print(i+ " ");
-            continue;
-        } //0~9
+// this(생성자 매개변수) 활용
+class A {
+    int m1, m2, m3, m4;
+    A() {
+        m1 = 1;
+        m2 = 2;
+        m3 = 3;
+        m4 = 4;
+    }
+    A(int a) {
+        m1 = a;
+        m2 = 2;
+        m3 = 3;
+        m4 = 4;
+    }
+    A(int a, int b) {
+        m1 = a;
+        m2 = b;
+        m3 = 3;
+        m4 = 4;
+    }
+    void print() {
+        System.out.print(m1+" ");
+        System.out.print(m2+" ");
+        System.out.print(m3+" ");
+        System.out.print(m4);
         System.out.println();
-
-        for(int i=0; i<10; i++) {
-            if(i==5) {
-                continue;
-            }
-            System.out.print(i+ " ");
-        } //0~4, 6~9
-        System.out.println();
-
-        //#2. 다중(이중 루프에서의 continue)
-        for(int i=0; i<5; i++) {
-            for(int j=0; j<5; j++) {
-                if(j==3) {
-                    continue;
-                }
-                System.out.println(i+ ", "+j);
-            }
-        }
-        //
-        System.out.println();
-        POS1: for(int i=0; i<5; i++) {
-            for(int j=0; j<5; j++) {
-                if(j==3) {
-                    continue POS1;
-                }
-                System.out.println(i+ ", "+j);
-            }
-        } //
     }
 }
+class B {
+    int m1, m2, m3, m4;
+    B() {
+        m1 = 1;
+        m2 = 2;
+        m3 = 3;
+        m4 = 4;
+    }
+    B(int a) {
+        this(); // B()생성자 호출
+        m1 = a;
+    }
+    B(int a, int b) {
+        this(a); // B(int a) 셍성자 호출
+        m2 = b;
+    }
+    /* 첫번째 생성자 호출 + 두개의 코드 추가
+    B(int a, int b) {
+        this();
+        m1 = a;
+        m2 = b;
+    }
+    */
+    void print() {
+        System.out.print(m1+" ");
+        System.out.print(m2+" ");
+        System.out.print(m3+" ");
+        System.out.print(m4);
+        System.out.println();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        //#1. 세가지 객체 생성 (this() 미사용)
+        A a1 = new A();
+        A a2 = new A(10);
+        A a3 = new A(10,20);
+        a1.print();
+        a2.print();
+        a3.print();
+
+        System.out.println();
+
+        //#2. 세가지 객체 생성 (this() 사용)
+        B b1 = new B();
+        B b2 = new B(10);
+        B b3 = new B(10,20);
+        b1.print();
+        b2.print();
+        b3.print();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
