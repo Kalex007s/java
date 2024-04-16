@@ -21,6 +21,27 @@ package StudyGroup.Study0416;
 
 public class HW02 {
     public static void main(String[] args) {
+        for (int i = 0, j = 0, k = 11; i <= 10; i++) {
+            j = j + 2;
+            k = k - 1;
+            System.out.println(i + " " + j + " " + k);
+        }
+
+/*        int i = 0;
+        int j = 0;
+        int k = 10;
+        int num = 0;
+        for (; i <= 10; i++) {
+            for (; j <= 10; j++) {
+                num = num+2;
+                for (; k >= 0; k--) {
+                    System.out.println(i+" "+num+" "+k);
+                    k--;
+                    break;
+                }
+                break;
+            }
+        }*/
 
     }
 }
