@@ -1,4 +1,4 @@
-package StudyGroup.study0415;
+package StudyGroup.Study0415;
 //1번부터 5번까지 if문 활용
 //6번부터 10번까지 for문 활용
 //11번부터 15번까지 while문 활용

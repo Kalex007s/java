@@ -10,5 +10,6 @@ package StudyGroup.Study0416;
 // 2. 3의 배수
 // 3. 1과 2의 숫자들의 총합
 // 4. 그 숫자들의 총 합이 짝수인지 홀수 인지 나타내라.
+
 public class Example {
 }
