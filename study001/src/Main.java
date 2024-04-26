@@ -2,32 +2,52 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] array = new int[] {3, 4, 5, 6, 7};
+        //#1. 비정방행렬의 선언 및 값 대입 방법1
+        int[][] array1 = new int[2][];
+        array1[0]=new int[2];
+        array1[0][0]=1;
+        array1[0][1]=2;
+        array1[1]=new int[3];
+        array1[1][0]=3;
+        array1[1][1]=4;
+        array1[1][2]=5;
 
-        //#1. 배열의 길이 구하기
-        System.out.println(array.length); //5
-
-        //#2. 출력하기 1:
-        System.out.print(array[0]+" ");
-        System.out.print(array[1]+" ");
-        System.out.print(array[2]+" ");
-        System.out.print(array[3]+" ");
-        System.out.print(array[4]+" ");
+        System.out.println(array1[0][0]+ " "+array1[0][1]);
+        System.out.println(array1[1][0]+ " "+array1[1][1]+ " "+array1[1][2]);
         System.out.println();
 
-        //#3. 출력하기 2:
-        for(int i=0; i<array.length; i++)
-            System.out.print(array[i]+" ");
+        int[][] array2 = new int[2][];
+        array2[0]=new int[] {1,2};
+        array2[1]=new int[] {3,4,5};
+
+        System.out.println(array2[0][0]+ " "+array2[0][1]);
+        System.out.println(array2[1][0]+ " "+array2[1][1]+ " "+array2[1][2]);
         System.out.println();
 
-        //#4. 출력하기 3:
-        //for(꺼낸 하나의 원소를 저장할 수 있는 변수:집합객체) {} for each 구문
-        for(int k : array) {
-            System.out.print(k+" ");
-        }
+        //#2. 비정방행렬의 선언 및 값 대입 방법2
+        int[][] array3 = new int[][] {{1,2},{3,4,5}};
+        System.out.println(array3[0][0]+ " "+array3[0][1]);
+        System.out.println(array3[1][0]+ " "+array3[1][1]+ " "+array3[1][2]);
         System.out.println();
 
-        //#5. 출력하기 4 :
-        System.out.println(Arrays.toString(array));
+        int[][] array4;
+        array4 = new int[][] {{1,2},{3,4,5}}; //선언 및 값 대입 방법2 = 배열의 선언과 객체 대입 분리 가능
+        System.out.println(array4[0][0]+ " "+array4[0][1]);
+        System.out.println(array4[1][0]+ " "+array4[1][1]+ " "+array4[1][2]);
+        System.out.println();
+
+        //#3. 비정방행렬의 선언 및 값 대입 방법3
+        int[][] array5 = {{1,2},{3,4,5}};
+        System.out.println(array5[0][0]+ " "+array5[0][1]);
+        System.out.println(array5[1][0]+ " "+array5[1][1]+ " "+array5[1][2]);
+        System.out.println();
+
+//		int[][] array6;
+//		array6 = {{1,2},{3,4,5}}; //선언 및 값 대입 방법3 = 배열의 선언과 객체 대입 분리 불가능
     }
 }
+
+
+
+
+
