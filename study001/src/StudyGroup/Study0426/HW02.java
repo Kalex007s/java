@@ -19,4 +19,26 @@ package StudyGroup.Study0426;
  */
 
 public class HW02 {
+    public static void main(String[] args) {
+        int startAge = 8;
+        int i;
+        System.out.println("초등학생");
+        for (i = 0; i < 6 ; i++) {
+            int grade = i+1;
+            System.out.println(grade+"학년 = " + startAge + "살");
+            startAge++;
+        }
+        System.out.println("중학생");
+        for (i = 0; i < 3; i++) {
+            int grade = i+1;
+            System.out.println(grade+"학년 = " + startAge + "살");
+            startAge++;
+        }
+        System.out.println("고등학생");
+        for (i = 0; i < 3; i++) {
+            int grade = i+1;
+            System.out.println(grade + "학년 = " + startAge + "살");
+            startAge++;
+        }
+    }
 }
