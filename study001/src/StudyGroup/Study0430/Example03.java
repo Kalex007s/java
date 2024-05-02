@@ -22,14 +22,12 @@ public class Example03 {
         int indexNumByNum = str2.indexOf("2");
         System.out.println(indexNumByNum);
         // 4번
-        char [] chars = str3.toCharArray();
         int count = 0;
         for (int i = 0; i < str3.length(); i++) {
             if(Character.toString(str3.charAt(i)).equals("a")){
                 count++;
             }
-        }
-        System.out.println(count);
+        } System.out.println(count);
     }
 
 }
