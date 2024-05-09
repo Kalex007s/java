@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-//복권 당첨 확인 프로그램 만들기
+public class HW01 {
+    public static void main(String[] args) {
+        //복권 당첨 확인 프로그램 만들기
 /*
 프로그램에는 랜덤으로 생성되는 값 = 당첨 번호가 존재 하며(6개의 숫자),
 유저가 값 6개를 입력한다.
@@ -21,8 +23,7 @@ Random rd = new Random();
  */
 //1. 프로그램을 설계하시오.
 //2. 코드를 작성하시오.
-public class HW01 {
-    public static void main(String[] args) {
+
         //복권번호 생성하기
         Random randomNum = new Random();
         int[] lottoNum = new int[6];
