@@ -1,16 +1,38 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
+
+
+
+
+
+interface A {
+    public static final int m = 1;
+    public static final int n = 2;
+
+    public abstract void abc();
+    public abstract void bcd();
+}
+
+
+
 public class Main {
     public static void main(String[] args) {
-     String str1 = "Hello Java";
-     String str2 = "Goodbye Java";
-     String str3 = "hello java";
 
-     Boolean bool = str1.equals(str3);
-        System.out.println(bool);
-        Boolean bool2 = str1.equalsIgnoreCase(str3);
-        System.out.println(bool2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
 
