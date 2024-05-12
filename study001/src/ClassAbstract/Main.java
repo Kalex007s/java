@@ -1,7 +1,7 @@
 package ClassAbstract;
 
 /*
-public class Main {
+public class StudyGroup.Study0513.Main {
     public static void main(String[] args) {                       //주의 : 변수는 소문자로 쓰기!
         Abstract abstract0 = new Abstract();
         System.out.println(abstract0.getValue());
