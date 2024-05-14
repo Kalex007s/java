@@ -1,9 +1,13 @@
 package StudyGroup.Study0513;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 class Script {
-    public int countString(String script, String word) {
+    Scanner scanner = new Scanner(System.in);
+    String script = scanner.nextLine();
+    String word = scanner.nextLine();
+    public int countString() {
         String [] arrayScript = new String[script.length()];
         int count = 0;
         for (int i = 0; i < script.length(); i++) {
@@ -24,6 +28,6 @@ public class HW02 {
         //조건 2)  사용자가 찾고자 하는 문자 혹은 문자열은 종류에 구애받지 않는다.
 
         Script script = new Script();
-        System.out.println(script.countString("123451231", "1"));
+        System.out.println(script.countString());
     }
 }
