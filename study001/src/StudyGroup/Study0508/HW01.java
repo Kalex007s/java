@@ -75,9 +75,6 @@ Random rd = new Random();
             }
         } //유저가 고른 숫자 6개를 유저배열에 입력
 
-
-        //등수확인
-
         //2..유저번호 정렬.
         set = userNum;
         for (int i = 0; i < set.length; i++) {
@@ -110,7 +107,7 @@ Random rd = new Random();
 //        } else {
 //            System.out.println("꽝");
 //        }
-
+        //등수확인
         int grade = 0;
         for (int i = 6; i >= 0; i--) {
             grade++;
