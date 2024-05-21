@@ -12,17 +12,10 @@ class SumNum {
         int sub = input - input2;
         return sub;
     }
-    public int numTwoNum(int a) {
-        int num = a + mul(3,5);
+    public int numTwoNum(int a, int b) {
+        int num = a + b;
         return num;
     }
-    public int mul(int a, int b) {
-        return a*b;
-    }
-    public double mul(double a, double b) {
-        return a*b;
-    }
-}
 public class Main {
     public static void main(String[] args) {
         //사용자에게 두 개의 숫자를 입력받아 다음을 수행하는 메서드를 만드시오.
