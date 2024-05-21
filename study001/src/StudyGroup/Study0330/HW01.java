@@ -5,8 +5,10 @@ package StudyGroup.Study0330;
 //a = 100, b = hello, c = 50.50, d = 나는 8살이야 , e = 99.999999, f = 180
 //이며 출력시 a는 a와f의 합, b는 goodbye 가 출력되게 코드를 작성하시오.
 
+
 public class HW01 {
     public static void main(String[]args){
+
         //첫번째 할 일 = 변수 선언
         int a = 100;
         String b = "hello";

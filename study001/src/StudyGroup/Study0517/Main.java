@@ -12,9 +12,15 @@ class SumNum {
         int sub = input - input2;
         return sub;
     }
-    public int numTwoNum(int a, int b) {
-        int num = a + b;
+    public int numTwoNum(int a) {
+        int num = a + mul(3,5);
         return num;
+    }
+    public int mul(int a, int b) {
+        return a*b;
+    }
+    public double mul(double a, double b) {
+        return a*b;
     }
 }
 public class Main {

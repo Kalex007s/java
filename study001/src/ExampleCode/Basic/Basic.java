@@ -2,7 +2,7 @@ package ExampleCode.Basic;
 
 import java.util.Scanner;
 
-public class Basic {
+ class Basic {
     public static void main(String[] args) {
         /*
         //1~3까지 숫자중 내가 가지고 있는 숫자(임의로 정한)와 같은 번호를 찾는 코드
