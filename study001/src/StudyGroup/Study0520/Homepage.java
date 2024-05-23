@@ -19,10 +19,14 @@ public class Homepage {
     public static void main(String[] args) {
         //데이터 베이스 생성
         LoginSignup loginSignup = new LoginSignup();
-        loginSignup.createUserInfoId();
-        loginSignup.createUserInfoPw();
+        ArrayList<String> id = loginSignup.createUserInfoId();
+        ArrayList<String> pw = loginSignup.createUserInfoPw();
         //회원체크
         System.out.println("기존 회원이라면 [로그인], 신규 회원이라면 [회원가입]을 입력하시오.");
+        //회원인 경우 로그인 진행, 비회원인 경우 회원가입 진행
+        String result = loginSignup.choose(id,pw);
+        System.out.println(result);
+
 
 
     }
