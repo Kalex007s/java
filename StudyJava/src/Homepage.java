@@ -1,5 +1,3 @@
-package StudyGroup.Study0520;
-
 
 import java.util.ArrayList;
 

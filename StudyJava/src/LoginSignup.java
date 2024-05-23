@@ -1,4 +1,4 @@
-package StudyGroup.Study0520;
+
 //[ 기존회원 명단 ]
 //id : alex || pw : a123
 //id : ben || pw : benKing00
